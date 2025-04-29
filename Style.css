@@ -1,0 +1,71 @@
+/* styles.css */
+
+/* Apply a dark background and modern font */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Deep dark gray */
+    color: #f0f0f0; /* Light gray text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  
+  /* Header */
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #bb86fc; /* Soft purple */
+  }
+  
+  /* Theme Selector */
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  select {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  /* Generate Button */
+  button {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  button:hover {
+    background-color: #9a67ea;
+  }
+  
+  /* Output Area */
+  #output {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  

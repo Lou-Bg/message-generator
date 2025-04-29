@@ -101,9 +101,19 @@ const themes = {
   }
   
   // When button clicked
-  document.getElementById('generate-btn').addEventListener('click', () => {
+    document.getElementById('generate-btn').addEventListener('click', () => {
     const theme = document.getElementById('theme-select').value;
+    const output = document.getElementById('output');
     const message = generateMessage(theme);
-    document.getElementById('output').innerText = message;
+  
+    // Reset any previous animation
+    output.classList.remove('fade-in');
+    
+    // Update the message
+    output.innerText = message;
+  
+    // Trigger the animation
+    void output.offsetWidth; // Trick to re-trigger animation
+    output.classList.add('fade-in');
   });
   

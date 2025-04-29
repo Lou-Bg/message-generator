@@ -1,4 +1,4 @@
-// messageComponents object holds all parts of the messages
+// Inspirational message parts
 const messageComponents = {
     openers: [
       "Success begins",
@@ -23,12 +23,40 @@ const messageComponents = {
     ]
   };
   
-  // Helper function to get a random item from any array
+  // Array of ASCII art templates with a placeholder for the message
+  const asciiArtTemplates = [
+    `
+     ✨
+    ( •_•)
+   <)   )╯  
+    /   \\  
+    "{message}"
+    `,
+    `
+    ★
+    /\\_/\\
+   ( o.o )  
+    > ^ <   "{message}"
+    `,
+    `
+    ☀️
+   (✿◕‿◕)  
+    /︶\\    {message}
+    `,
+    `
+    🌟
+    (•̀ᴗ•́)و  
+    /|\\       "{message}"
+    / \\
+    `
+  ];
+  
+  // Helper function to get a random item from an array
   function getRandomPart(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
   
-  // Main function to generate the message
+  // Generates the full inspirational message
   function generateQuote() {
     const { openers, middles, endings } = messageComponents;
     const part1 = getRandomPart(openers);
@@ -37,8 +65,16 @@ const messageComponents = {
     return `${part1} ${part2} ${part3}`;
   }
   
-  // Display the message in the console
-  console.log("\n✨ Your Inspirational Message ✨");
-  console.log(generateQuote());
-  console.log("\n");
+  // Combines quote with ASCII art
+  function displayMessageWithArt() {
+    const quote = generateQuote();
+    const template = getRandomPart(asciiArtTemplates);
+    const finalOutput = template.replace("{message}", quote);
+    
+    console.log("\n✨ Your Inspirational Message ✨\n");
+    console.log(finalOutput);
+  }
+  
+  // Run the generator
+  displayMessageWithArt();
   
